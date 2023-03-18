@@ -44,4 +44,4 @@ def download():
     return 'Download has been started. Go back and wait.'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)

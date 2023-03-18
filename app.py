@@ -31,9 +31,7 @@ def display_pdf(folder):
 def download():
     url = request.form['url']
 
-    subprocess.Popen(['python3',
-                             '-m',
-                             'mangadex_downloader',
+    subprocess.Popen(['mangadex-downloader',
                              '--path', DOWNLOADS_DIR,
                              '--language', 'en',
                              '-f', 'pdf-single',

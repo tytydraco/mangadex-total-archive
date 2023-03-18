@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MTA</title>
+</head>
+	<body>
+		<h1>MangaDex Total Archive</h1>
+		<form method="post" action="{{ url_for('download') }}">
+			<input required type="text" id="url" name="url" placeholder="MangaDex URL" />
+			<br />
+			<input type="submit" value="Download" />
+		</form>
+
+		<h1>Downloads</h1>
+		{% for entry in list %}
+			<a href="/view/{{ entry }}">{{ entry }}</a>
+		{% endfor %}
+	</body>
+</html>
